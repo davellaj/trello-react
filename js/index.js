@@ -6,5 +6,9 @@ import Board from './components/board'
 
 document.addEventListener('DOMContentLoaded', () => {
   // const elem = <Board title='Board Title' />
-  ReactDOM.render(<Board />, document.getElementById('app'))
+  const boardTitle = 'My First Board'
+  const lists = ['First List', 'Second List', 'Third List']
+  ReactDOM.render(
+    <Board title={boardTitle} lists={lists} />,
+    document.getElementById('app'))
 })
