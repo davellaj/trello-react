@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import Card from './card.js';
+import Card from './card.js'
 
-export default function List () {
+export default function List (props) {
   return (
     <div>
-      <Card />
-      <Card />
-      <Card />
+      <h3>{this.props.title}</h3>
+      <div>{this.props.cards}</div>
     </div>
   )
+}
+
+List.defaultProps = {
+  title: 'To-do List'
 }

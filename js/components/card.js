@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-export default function Card () {
-  let text = 'This is a card';
+export default function Card (props) {
   return (
-    <div>{text}</div>
-  );
+    <div>{this.props.text}</div>
+  )
+}
+
+Card.defaultProps = {
+  text: 'To-do item'
 }
