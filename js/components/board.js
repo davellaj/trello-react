@@ -15,7 +15,7 @@ export default function Board (props) {
   );
 }
 
-List.defaultProps = {
-  title: 'Board',
-  cards: <List />
+Board.defaultProps = {
+  title: 'Default-Board',
+  lists: ['Default-One', 'Default-Two']
 }

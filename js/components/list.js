@@ -5,6 +5,10 @@ import Card from './card.js'
 
 export default function List (props) {
   // map out 'cards' to individual card(s)?
+  const cardsArr = props.cards.map((cardElm) => {
+  	return <Card title={cardElm} />
+  }) 
+  
   return (
     <div>
       <h3>{props.title}</h3>
@@ -14,6 +18,6 @@ export default function List (props) {
 }
 
 List.defaultProps = {
-  title: 'To-do List',
+  title: 'Default-To-do List',
   cards: <Card />
 }
