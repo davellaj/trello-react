@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import List from './list.js';
+import ListConatiner from './list-container.js';
 
 export default class Board extends React.Component {
   constructor(props) {
@@ -35,21 +36,21 @@ export default class Board extends React.Component {
 
   render () {
 
-    const listArr = this.state.lists.map((listElem, index) => {
-      return <List
-        title={listElem.listTitle}
-        cards={listElem.card}
-        key={index}
-        onAddInputChanged={this.onAddInputChanged}
-        onAddSubmit={this.onAddSubmit}
-        />
-    });
+    // const listArr = this.state.lists.map((listElem, index) => {
+    //   return <List
+    //     title={listElem.listTitle}
+    //     cards={listElem.card}
+    //     key={index}
+    //     onAddInputChanged={this.onAddInputChanged}
+    //     onAddSubmit={this.onAddSubmit}
+    //     />
+    // });
 
     return (
       <div>
         <h2>{this.state.title}</h2>
         <div>
-          {listArr}
+          <ListContainer />
         </div>
       </div>
     );
