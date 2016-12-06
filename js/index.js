@@ -8,24 +8,26 @@ const boardState = {
 	title: "My board title",
 	lists: [
 		{
-			title: 'List 1',
+			listTitle: 'List 1',
 			card: ['groceries', 'laundry', 'make chores']
 		},
 		{
-			title: 'List 2',
-			card: ['groceries', 'laundry', 'make chores']
+			listTitle: 'List 2',
+			card: ['eggs', 'bread', 'milk']
 		},
 		{
-			title: 'List 3',
-			card: ['groceries', 'laundry', 'make chores']
+			listTitle: 'List 3',
+			card: ['run', 'situps', 'yoga']
 		}
 	]
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const boardTitle = 'My First Board'
-  const lists = ['First List', 'Second List', 'Third List']
+	//console.log(boardState.title);
+	//console.log(boardState.lists);
+  //const boardTitle = 'My First Board'
+  //const lists = ['First List', 'Second List', 'Third List']
   ReactDOM.render(
-    <Board title={boardTitle} lists={lists} />,
+    <Board title={boardState.title} lists={boardState.lists} />,
     document.getElementById('app'))
 })

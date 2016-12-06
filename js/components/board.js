@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom'
 import List from './list.js'
 
 export default function Board (props) {
-  const eachList = props.lists.map((listElem) => {
-    return <List title={listElem}/>
+  console.log(props, "Board")
+  const eachList = props.lists.map((listElem, index) => {
+    return <List theme={listElem.listTitle} cards={listElem.card} key={index}/>
   })
   return (
     <div>
@@ -15,7 +16,8 @@ export default function Board (props) {
   );
 }
 
-Board.defaultProps = {
-  title: 'Default-Board',
-  lists: ['Default-One', 'Default-Two']
-}
+// Board.defaultProps = {
+//   title: 'Default-Board',
+//   lists: ['Default-One', 'Default-Two']
+// }
+
