@@ -10,22 +10,21 @@ export default class Board extends React.Component {
       title: "My board title",
       lists: [
         {
-          listTitle: 'List 1',
-          card: ['groceries', 'laundry', 'make chores']
+          listTitle: 'Chores',
+          card: ['groceries', 'laundry', 'make bed']
         },
         {
-          listTitle: 'List 2',
-          card: ['eggs', 'bread', 'milk']
+          listTitle: 'Groceries',
+          card: ['eggs', 'leeks', 'milk']
         },
         {
-          listTitle: 'List 3',
+          listTitle: 'Exercise',
           card: ['run', 'situps', 'yoga']
         }
       ]
     }
-
-
   }
+
   onAddInputChanged(event){
       console.log('something');
   }
@@ -34,16 +33,23 @@ export default class Board extends React.Component {
       console.log('hello');
   }
 
-
-
   render () {
+
+    const listArr = this.state.lists.map((listElem, index) => {
+      return <List
+        title={listElem.listTitle}
+        cards={listElem.card}
+        key={index}
+        onAddInputChanged={this.onAddInputChanged}
+        onAddSubmit={this.onAddSubmit}
+        />
+    });
+
     return (
       <div>
         <h2>{this.state.title}</h2>
         <div>
-          <List title={this.state.lists[0].listTitle} cards={this.state.lists[0].card} 
-          onAddInputChanged={this.onAddInputChanged} onAddSubmit={this.onAddSubmit}
-          />
+          {listArr}
         </div>
       </div>
     );

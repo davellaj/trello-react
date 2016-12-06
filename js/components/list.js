@@ -9,12 +9,6 @@ export default function List (props) {
     return <Card text={listItem} key={index}/>
   })
 
-
-
-
-
-
-
   return (
     <div>
       <h4>{props.title}</h4>
@@ -27,23 +21,5 @@ export default function List (props) {
       </form>
     </div>
 
-
-
   )
 }
-
-// export defualt class List extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       title: 'doggy',
-//       card: ['yep', 'another dog', 'hey another one'],
-//     };
-//     this.addCardName = this.addCardName.bind(this);
-//     this.submitForm = this.submitForm.bind(this);
-//   }
-//   addCardName(event) {
-//     this.setState(console.log('hayo'));
-//   }
-
-// }
