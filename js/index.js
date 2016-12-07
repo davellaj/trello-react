@@ -6,20 +6,7 @@ import Board from './components/board'
 
 const boardState = {
 	title: "My board title",
-	lists: [
-		{
-			listTitle: 'List 1',
-			card: ['groceries', 'laundry', 'make chores']
-		},
-		{
-			listTitle: 'List 2',
-			card: ['eggs', 'bread', 'milk']
-		},
-		{
-			listTitle: 'List 3',
-			card: ['run', 'situps', 'yoga']
-		}
-	]
+	lists: ["Allen's List", "Theresa's List", "Chris' List"]
 }
 
 document.addEventListener('DOMContentLoaded', () => {

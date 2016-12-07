@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import List from './list.js'
+import ListContainer from './list-container'
 
 export default function Board (props) {
   //console.log(props, "Board")
   const eachList = props.lists.map((listElem, index) => {
-    return <List theme={listElem.listTitle} cards={listElem.card} key={index}/>
-  })
+    return (
+    <ListContainer theme={listElem} key={index}/>
+    )
+  });
 
   return (
     <div>
